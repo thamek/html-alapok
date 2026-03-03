@@ -14,3 +14,11 @@ git push -u origin main
 
 git config --global user.name "Kis Tamas"
 git config --global user.email "tamaskix@gmail.com"
+
+
+
+
+
+git add .
+git commit -m "ujabb modositas"
+git push
