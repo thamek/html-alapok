@@ -22,6 +22,14 @@
 
 
 /* --- ALAP BEÁLLÍTÁSOK --- */
+:root {
+    --hatter-szin: #121212;
+    --szoveg-szin: #e0e0e0;
+    --kiemelo-szin: #bb86fc;
+    --kartya-hatter: #1e1e1e;
+    --szegely-szin: #333333;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -29,22 +37,26 @@
 }
 
 body {
-    /* Háttérszín */
-    background-color: #222831;
-    /* Betűtípus */
-    font-family: "Funnel Display", sans-serif;
-    /* Betűszín */
-    color: #cecece;
-    /* Sormagasság */
+    background-color: var(--hatter-szin);
+    color: var(--szoveg-szin);
+    font-family: "Oxygen", sans-serif;
     line-height: 1.6;
-    margin: 15px;
-    
+    padding: 20px;
 }
 
 
 /* --- OLDAL KERET --- */
 .oldal-keret {
     /* Az egész oldal kerete / szélessége */
+.oldal-keret {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
 }
 
 
