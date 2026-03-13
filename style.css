@@ -44,10 +44,7 @@ body {
     padding: 20px;
 }
 
-
 /* --- OLDAL KERET --- */
-.oldal-keret {
-    /* Az egész oldal kerete / szélessége */
 .oldal-keret {
     max-width: 1200px;
     margin: 0 auto;
@@ -56,154 +53,219 @@ body {
     gap: 30px;
 }
 
-
-}
-
-
 /* --- FEJLÉC --- */
 .fejlec {
-    /* Háttér, padding, szöveg igazítás */
+    width: 100%;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--kartya-hatter);
+    border-radius: 10px;
 }
 
 .fooldal-cim {
-    /* Főcím stílusa */
-    margin: auto;
-    text-align: center;
-    margin-bottom: 0px;
-    margin-top: 50px;
-    border-radius: 10px;
-    border-style: solid;
-    border-bottom: dashed;
-    border-top: dashed;
-    border-width: 3px;
-    width: 30%;
-    margin-bottom: 100px;
-    
-
-   
-}
+    font-family: "Funnel Display", sans-serif;
+    font-size: 64px; 
+    margin-bottom: 10px;
+} 
 
 .kiemeles {
-    /* A "CSS" szó kiemelése a címben */
-    font-weight: 100;
+    color: var(--kiemelo-szin);
 }
 
-
-
 .alcim {
-    /* Alcím stílusa */
-    border-radius: 10px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
+    font-size: 24px; 
     font-weight: 300;
-    background-color: #31363F;
-    margin-bottom: 30px;
-   
+    color: #aaaaaa;
 }
 
 
 /* --- BEVEZETŐ --- */
-.bevezeto {
-    /* A bevezető szekció háttere, padding-ja */
-    margin: auto;
+..bevezeto {
+    width: 100%;
     text-align: center;
-    width: 50%;
-    font-style: italic;
+    margin-bottom: 40px;
+    font-size: 19px;
 }
 
 .bevezeto-szoveg p {
-    /* Bevezető bekezdések */
+    margin-bottom: 15px;
+    color: #aaaaaa;
 }
 
+.bevezeto strong, .bevezeto abbr, .bevezeto code {
+    color: var(--kiemelo-szin);
+    text-decoration: none;
+}
+
+.tartalom {
+    flex: 1 1 65%; /* A rendelkezésre álló hely kb. 65%-át foglalja el */
+}
+
+.oldalsav {
+    flex: 1 1 30%; /* A rendelkezésre álló hely kb. 30%-át foglalja el */
+}
 
 /* --- KÁRTYÁK (a fő tartalom elemei) --- */
 .kartya {
-    /* Háttér, padding, margin, border, border-radius, box-shadow */
+    background-color: var(--kartya-hatter);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--szegely-szin);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .kartya-cim {
-    /* Kártya címek stílusa */
+    font-family: "Funnel Display", sans-serif;
+    font-size: 32px;
+    color: var(--kiemelo-szin);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--szegely-szin);
+    padding-bottom: 10px;
 }
-
 
 /* --- SZABÁLYOK LISTA --- */
 .szabaly-lista {
-    /* Lista stílus (list-style, padding) */
+    list-style: none; /* Eltünteti az alapértelmezett pöttyöket */
+    padding: 0;
 }
 
 .szabaly {
-    /* Egyes szabály elemek */
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--szegely-szin);
+    color: #cccccc;
+}
+
+.szabaly:last-child {
+    border-bottom: none;
 }
 
 
 /* --- INSPIRÁCIÓ RÁCS --- */
 .inspiracio-racsozat {
-    /* Használj flexbox-ot a 4 elem elrendezéséhez!
-       display: flex;
-       flex-wrap: wrap;
-       gap: ...;
-    */
+    display: flex; /* Bekapcsoljuk a Flexbox-ot a rácshoz */
+    flex-wrap: wrap; /* Engedjük, hogy a kártyák új sorba törjenek */
+    gap: 20px; /* Távolság a rácselemek között */
+    margin-top: 20px;
 }
 
 .inspiracio-elem {
-    /* Egyes inspiráció kártyák */
+    flex: 1 1 calc(50% - 20px); /* Kétoszlopos elrendezés (50% mínusz a köz) */
+    background-color: rgba(255, 255, 255, 0.03); /* Nagyon halvány háttér */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--kiemelo-szin); /* Színes díszítő csík a bal oldalon */
 }
 
 .inspiracio-elem h4 {
-    /* Inspiráció alcímek */
+    color: var(--szoveg-szin);
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.inspiracio-elem p {
+    font-size: 15px;
+    color: #999999;
 }
 
 
 /* --- TECHNOLÓGIA BADGE-EK --- */
 .tech-lista {
-    /* Flexbox elrendezés a badge-ekhez */
+    display: flex; /* Újabb Flexbox tároló */
+    flex-wrap: wrap; /* Ha nem férnek el egy sorban, törjenek meg */
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .tech-badge {
-    /* Kis címkék stílusa: háttér, padding, border-radius */
+    background-color: #252525;
+    color: var(--kiemelo-szin);
+    border: 1px solid var(--kiemelo-szin);
+    padding: 5px 12px;
+    border-radius: 20px; /* Teljesen lekerekített szélek */
+    font-size: 14px;
+    font-family: "Space Mono", monospace; /* Technikai jellegű betűtípus */
+    transition: all 0.3s ease; /* BÓNUSZ: Sima átmenet az animációhoz */
+}
+
+/* BÓNUSZ: Hover effekt a badge-eken */
+.tech-badge:hover {
+    background-color: var(--kiemelo-szin);
+    color: #121212;
+    cursor: default;
 }
 
 
 /* --- OLDALSÁV --- */
-.oldalsav {
-    /* Oldalsáv háttere, pozíciója */
+.szerzo-info, .hasznos-linkek {
+    background-color: var(--kartya-hatter);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid var(--szegely-szin);
 }
 
 .oldalsav-cim {
-    /* Oldalsáv címek */
+    font-family: "Funnel Display", sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--kiemelo-szin);
 }
 
 .szerzo-nev {
-    /* Szerző neve — írd át a CSS-ben is ha akarod kiemelni */
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
+.szerzo-szak, .szerzo-ev {
+    font-size: 16px;
+    color: #888888;
+}
 
 /* --- LINKEK --- */
 .link-lista {
-    /* Link lista stílus */
+    list-style: none;
+}
+
+.link-lista li {
+    margin-bottom: 10px;
 }
 
 .kulso-link {
-    /* Link stílus: szín, text-decoration */
+    color: var(--szoveg-szin);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease; /* BÓNUSZ: Sima színváltás */
 }
 
 .kulso-link:hover {
-    /* Hover effekt a linkekre */
+    color: var(--kiemelo-szin);
+    text-decoration: underline;
 }
 
 
 /* --- LÁBLÉC --- */
 .lablec {
-    /* Lábléc háttér, padding, szöveg */
+    width: 100%; /* Kitölti a teljes szélességet alul */
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-top: 1px solid var(--szegely-szin); /* Egy vékony elválasztó vonal felülre */
+    color: #666666;
+    font-size: 14px;
 }
 
 .lablec-megjegyzes {
-    /* Kis megjegyzés a láblécben */
+    margin-top: 10px;
+    font-style: italic;
 }
 
+.lablec cite {
+    color: var(--kiemelo-szin);
+    font-style: normal;
+    font-weight: bold;
+}
 
 /* --- EXTRA: Hover effektek, átmenetek ---
    Próbálj ki transition-öket!
