@@ -113,6 +113,12 @@ body {
     border-radius: 10px;
     border: 1px solid var(--szegely-szin);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Zökkenőmentes animáció */
+}
+
+.kartya:hover {
+    transform: translateY(-8px); /* 8 pixelt emelkedik */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Mélyebb árnyék */
 }
 
 .kartya-cim {
@@ -261,11 +267,7 @@ body {
     font-style: italic;
 }
 
-.lablec cite {
-    color: var(--kiemelo-szin);
-    font-style: normal;
-    font-weight: bold;
-}
+
 
 /* --- EXTRA: Hover effektek, átmenetek ---
    Próbálj ki transition-öket!
