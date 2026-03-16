@@ -27,7 +27,7 @@
     --hatter-szin-mely: #0a0f1a;
     --szoveg-szin: #e7ecf7;
     --masodlagos-szoveg: #a7b0c2;
-    --kiemelo-szin: #dbe6ff;
+    --kiemelo-szin: #bccff8;
     --kartya-hatter: rgba(18, 24, 38, 0.58);
     --kartya-hatter-eros: rgba(12, 16, 28, 0.76);
     --szegely-szin: rgba(255, 255, 255, 0.10);
@@ -55,7 +55,6 @@ body {
     position: relative;
 }
 
-/* finom háttérfény az üveghatás mögé */
 body::before {
     content: "";
     position: fixed;
@@ -101,17 +100,6 @@ body::before {
     box-shadow: none;
 }
 
-.fejlec::before {
-    content: "";
-    position: absolute;
-    width: 360px;
-    height: 360px;
-    right: -120px;
-    top: -150px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(176, 203, 255, 0.16), transparent 66%);
-    filter: blur(10px);
-}
 
 .fooldal-cim {
     font-family: "Manrope", sans-serif;
@@ -154,7 +142,6 @@ body::before {
     max-width: 700px;
     margin: 0 auto;
     padding-bottom: 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .bevezeto strong,
@@ -366,42 +353,4 @@ body::before {
     font-style: italic;
 }
 
-
-/* --- RESZPONZÍV FINOMÍTÁSOK ---
-   csak vizuális finomítás, layout logika nem változik */
-@media (max-width: 900px) {
-    .fooldal-cim {
-        font-size: 52px;
-    }
-
-    .alcim {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        padding: 16px;
-    }
-
-    .fejlec {
-        padding: 48px 18px;
-    }
-
-    .bevezeto,
-    .kartya,
-    .szerzo-info,
-    .hasznos-linkek {
-        padding: 22px;
-        border-radius: 16px;
-    }
-
-    .fooldal-cim {
-        font-size: 42px;
-    }
-
-    .kartya-cim {
-        font-size: 28px;
-    }
-}
    ---------------------------------------- */
